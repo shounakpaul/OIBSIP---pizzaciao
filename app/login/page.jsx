@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import RedirectMe from "./redirect";
 import { MongoClient } from "mongodb";
 import PizzaCiaoLogo from "@/public/logo.png";
+import Link from "next/link";
 
 import { NextRequest } from "next/server";
 
@@ -186,12 +187,12 @@ async function LoginPage() {
                     Forgot password?
                   </a>
                 </div>
-                <button
+                <Link
                   href="/home"
                   className="w-full bg-blue-500 hover:bg-blue-600 rounded-lg text-lg text-white border-0 py-2"
                 >
                   Sign in
-                </button>
+                </Link>
                 <p className="text-sm font-light text-gray-500 ">
                   Don't have an account yet?{" "}
                   <a
