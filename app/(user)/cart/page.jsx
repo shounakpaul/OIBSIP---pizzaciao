@@ -2,7 +2,9 @@ import React from "react";
 import Image from "next/image";
 import { MongoClient } from "mongodb";
 
+import PaymentForm from "../../checkout/PaymentForm";
 import CartPizza from "@/public/cart/pizza_cart.png";
+import Link from "next/link";
 
 async function fetchCart() {
   console.log("fetching options");
@@ -59,9 +61,12 @@ async function page() {
           <p className="text-lg mb-2">Review your order and checkout</p>
           <p className="text-lg">Total: ₹{cost}</p>
         </div>
-        <button className="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 rounded h-min py-2 my-auto shadow-lg hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+        <Link
+          href="/checkout"
+          className="bg-orange-500 hover:bg-orange-700 text-white font-bold px-4 rounded h-min py-2 my-auto shadow-lg hover:shadow-xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+        >
           Checkout
-        </button>
+        </Link>
       </div>
       {cart.map((item) => (
         <div
