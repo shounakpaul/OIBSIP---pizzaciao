@@ -189,7 +189,7 @@ async function LoginPage() {
                 </div>
                 <Link
                   href="/home"
-                  className="w-full bg-blue-500 hover:bg-blue-600 rounded-lg text-lg text-white border-0 py-2"
+                  className="w-full bg-blue-500 hover:bg-blue-600 rounded-lg text-lg text-white border-0 py-2 mt-3"
                 >
                   Sign in
                 </Link>
